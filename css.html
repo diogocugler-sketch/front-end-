@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Botão Interativo</title>
+    
+    <h1>Título Principal</h1>
+    <p>Este é um parágrafo de texto simples que pode conter 
+múltiplas frases.</p>
+
+    <style>
+.meu-botao {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+
+        }
+        .meu-botao:hover {
+            background-color: #f1f508;
+        }
+    </style>
+</head>
+<body>
+    <p>Este é um parágrafo de texto simples que pode conter 
+múltiplas frases.</p>
+
+    <button class="meu-botao" onclick="mostrarMensagem()">
+        Clique Aqui!
+    </button>
+    <p>Este é um parágrafo de texto simples que pode conter 
+múltiplas frases.</p>
+
+    <button class="meu-botao1" onclick="mostrarMensagem()">
+        Clique Aqui!
+    </button>
+    <button class="meu-botao2" onclick="mostrarMensagem()">
+        Clique Aqui!
+    </button>
+    <button class="meu-botao" onclick="mostrarMensagem()">
+        Clique Aqui!
+    </button>
+
+    <script>
+        function mostrarMensagem() {
+            alert("Olá, mundo!");
+        }
+    </script>
+</body>
+</html>
