@@ -1,0 +1,11 @@
+h1 { color: aqua;}
+p {color: rgb(255, 0, 0);}
+.container {
+font-size: 40px;
+}
+#orcamento {
+background-color: darkgreen;
+}
+input {
+background-color: aqua;
+}
