@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - Landing Page</title>
+  <!-- Link para o seu CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+/* O main agora apenas empilha as seções verticalmente (comportamento padrão) */
+.main {
+  display: block; 
+}
+
+/* O segredo: Esta classe limita o tamanho do conteúdo e centraliza na tela */
+.container {
+  max-width: 1200px; /* Largura máxima que o seu conteúdo vai ter */
+  width: 90%;        /* Garante margem nas laterais em telas de celular */
+  margin: 0 auto;    /* Centraliza o container horizontalmente */
+}
+
+/* Se você quiser alinhar o conteúdo interno de uma seção específica com Flexbox: */
+.hero__container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo do Hero */
+  align-items: center;     /* Centraliza verticalmente o conteúdo do Hero */
+  gap: 30px;               /* Dá um espaço entre o texto e a imagem */
+  flex-wrap: wrap;         /* No celular, a imagem passa para baixo do texto */
+}
+
+/* Remova ou ajuste as larguras fixas de 200px das seções para que elas usem 100% */
+.section_hero, 
+.section_about, 
+.section_services, 
+.section_portfolio, 
+.section_testimonials {
+  width: 100%;
+  padding: 60px 0; /* Dá um espaçamento agradável no topo e fundo de cada seção */
+}
+
+/* Exemplo rápido para o seu Header também ficar centralizado e correto */
+.header {
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between; /* Logo na esquerda, Menu no centro, Botão na direita */
+  align-items: center;
+  padding: 20px 0;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+</style>
+<body id="top">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header" class="header">
+    <div class="container header__container">
+      <a href="#top" id="logo" class="logo">Logo</a>
+
+      <nav id="nav" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero" class="nav__link">Início</a></li>
+          <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li class="nav__item"><a href="#portfolio" class="nav__link">Portfólio</a></li>
+          <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contato" id="header-cta" class="btn btn--primary">Fale conosco</a>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" class="section_hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Título principal da página</h1>
+          <p class="hero__text">
+            Um texto curto de apresentação explicando o que você faz e qual
+            problema resolve para o seu cliente.
+          </p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--primary">Começar agora</a>
+            <a href="#sobre" class="btn btn--secondary">Saiba mais</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <img src="" alt="Imagem de destaque" class="hero__image">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section id="sobre" class="section_about">
+      <div class="container about__container">
+        <div class="about__media">
+          <img src="" alt="Foto sobre nós" class="about__image">
+        </div>
+        <div class="about__content">
+          <h2 class="section__title">Sobre nós</h2>
+          <p class="section__subtitle">Subtítulo da seção</p>
+          <p class="about__text">
+            Parágrafo contando a história, a missão e os valores.
+          </p>
+          <p class="about__text">
+            Segundo parágrafo com mais detalhes sobre a equipe ou o projeto.
+          </p>
+          <ul class="about__stats">
+            <li class="stat">
+              <span class="stat__number">+100</span>
+              <span class="stat__label">Projetos</span>
+            </li>
+            <li class="stat">
+              <span class="stat__number">+50</span>
+              <span class="stat__label">Clientes</span>
+            </li>
+            <li class="stat">
+              <span class="stat__number">5</span>
+              <span class="stat__label">Anos de experiência</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section id="servicos" class="section_services">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Nossos serviços</h2>
+          <p class="section__subtitle">Descrição curta da seção</p>
+        </header>
+
+        <div class="services__grid">
+          <article class="card service-card">
+            <div class="card__icon">Ícone</div>
+            <h3 class="card__title">Serviço 1</h3>
+            <p class="card__text">Descrição breve do serviço.</p>
+            <a href="#" class="card__link">Ver mais</a>
+          </article>
+
+          <article class="card service-card">
+            <div class="card__icon">Ícone</div>
+            <h3 class="card__title">Serviço 2</h3>
+            <p class="card__text">Descrição breve do serviço.</p>
+            <a href="#" class="card__link">Ver mais</a>
+          </article>
+
+          <article class="card service-card">
+            <div class="card__icon">Ícone</div>
+            <h3 class="card__title">Serviço 3</h3>
+            <p class="card__text">Descrição breve do serviço.</p>
+            <a href="#" class="card__link">Ver mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PORTFÓLIO ===================== -->
+    <section id="portfolio" class="section_portfolio">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Portfólio</h2>
+          <p class="section__subtitle">Alguns dos nossos trabalhos</p>
+        </header>
+
+        <div class="portfolio__grid">
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 1" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 1</figcaption>
+          </figure>
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 2" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 2</figcaption>
+          </figure>
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 3" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 3</figcaption>
+          </figure>
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 4" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 4</figcaption>
+          </figure>
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 5" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 5</figcaption>
+          </figure>
+          <figure class="portfolio__item">
+            <img src="" alt="Projeto 6" class="portfolio__image">
+            <figcaption class="portfolio__caption">Projeto 6</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEPOIMENTOS ===================== -->
+    <section id="depoimentos" class="section_testimonials">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">O que dizem sobre nós</h2>
+        </header>
+
+        <div class="testimonials__list">
+          <blockquote class="testimonial">
+            <p class="testimonial__text">"Texto do depoimento do cliente."</p>
+            <footer class="testimonial__author">
+              <img src="" alt="Foto do cliente" class="testimonial__avatar">
+              <div class="testimonial__info">
+                <strong class="testimonial__name">Nome do Cliente</strong>
+                <span class="testimonial__role">Cargo / Empresa</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p class="testimonial__text">"Texto do depoimento do cliente."</p>
+            <footer class="testimonial__author">
+              <img src="" alt="Foto do cliente" class="testimonial__avatar">
+              <div class="testimonial__info">
+                <strong class="testimonial__name">Nome do Cliente</strong>
+                <span class="testimonial__role">Cargo / Empresa</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p class="testimonial__text">"Texto do depoimento do cliente."</p>
+            <footer class="testimonial__author">
+              <img src="" alt="Foto do cliente" class="testimonial__avatar">
+              <div class="testimonial__info">
+                <strong class="testimonial__name">Nome do Cliente</strong>
+                <span class="testimonial__role">Cargo / Empresa</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section id="cta" class="section cta">
+      <div class="container cta__container">
+        <h2 class="cta__title">Pronto para começar?</h2>
+        <p class="cta__text">Entre em contato e peça um orçamento.</p>
+        <a href="#contato" class="btn btn--primary">Solicitar orçamento</a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="section contact">
+      <div class="container contact__container">
+        <div class="contact__info">
+          <h2 class="section__title">Contato</h2>
+          <p class="contact__text">Fale com a gente pelos canais abaixo.</p>
+          <ul class="contact__list">
+            <li class="contact__item">E-mail: contato@exemplo.com</li>
+            <li class="contact__item">Telefone: (00) 00000-0000</li>
+            <li class="contact__item">Endereço: Rua Exemplo, 123</li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="form" action="#" method="post">
+          <div class="form__group">
+            <label for="nome" class="form__label">Nome</label>
+            <input type="text" id="nome" name="nome" class="form__input" placeholder="Seu nome">
+          </div>
+
+          <div class="form__group">
+            <label for="email" class="form__label">E-mail</label>
+            <input type="email" id="email" name="email" class="form__input" placeholder="seu@email.com">
+          </div>
+
+          <div class="form__group">
+            <label for="assunto" class="form__label">Assunto</label>
+            <select id="assunto" name="assunto" class="form__select">
+              <option value="">Selecione</option>
+              <option value="orcamento">Orçamento</option>
+              <option value="duvida">Dúvida</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="mensagem" class="form__label">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" class="form__textarea" placeholder="Escreva sua mensagem"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary form__button">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer" class="footer" style="text-align: center ;">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="#top" class="logo footer__logo">Logo</a>
+        <p class="footer__text">Frase curta sobre a empresa.</p>
+      </div>
+
+      <nav class="footer__nav">
+        <h4 class="footer__title">Links</h4>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#hero" class="footer__link">Início</a></li>
+          <li class="footer__item"><a href="#sobre" class="footer__link">Sobre</a></li>
+          <li class="footer__item"><a href="#servicos" class="footer__link">Serviços</a></li>
+          <li class="footer__item"><a href="#contato" class="footer__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h4 class="footer__title">Redes sociais</h4>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">LinkedIn</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Nome da Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
